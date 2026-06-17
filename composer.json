@@ -61,7 +61,7 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
             "@php artisan vendor:publish --provider='Uspdev\\UspTheme\\ServiceProvider' --tag=assets --force",
-            "git describe --tags --abbrev=0 > version.txt"
+            "git describe --tags --abbrev=0 > version.txt || echo 'dev' > version.txt"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
